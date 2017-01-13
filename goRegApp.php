@@ -7,6 +7,7 @@ $nombre   ="jesus";
 $apellido ="leira";
 $pass   =Encrypt("1337");
 $email  ="jleira@uninorte.edu.co";
+$telefono  ="3116651305";
 $cod1=generarCodigo(6);
 
 /*
