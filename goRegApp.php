@@ -18,21 +18,20 @@ $telefono  =$_POST['telefonor'];
 $email  =$_POST['correor'];
 $key="hola";
 $cod1   = generarCodigo(6);
-/*/
-//$sql3   =  $db -> query("SELECT codigo_user FROM users WHERE codigo_user='$cod1' LIMIT 1;");
-//$cod2   = $db-> recorrer($sql3)[0];
-//  $db-> liberar($sql3);
-$sql    = $db -> query("SELECT telefono FROM users WHERE (telefono='$telefono' OR email='$email')  LIMIT 1;");
+*/
+$sql3   =  $db -> query("SELECT codigo_user FROM users WHERE codigo_user='$cod1' LIMIT 1;");
+$cod2   = $db-> recorrer($sql3)[0];
+$db-> liberar($sql3);
+$sql    = $db -> query("SELECT telefono,email FROM users WHERE (telefono='$telefono' OR email='$email')  LIMIT 1;");
 $response=array();
 $response['success']=false;
 if ($db->rows($sql) == 0) {
-/*      while ($cod1 == $cod2) {
+     while ($cod1 == $cod2) {
         $cod1 = generarCodigo(6);
         $sql3 =  $db -> query("SELECT codigo_user FROM users WHERE codigo_user='$cod1' LIMIT 1;");
         $cod2 = $db-> recorrer($sql3)[0];
         $db-> liberar($sql3);
       }
-      /*/
       $keyreg = md5(time());
       $link= APP_URL.'?view=activar&key='. $keyreg;
 
@@ -62,7 +61,7 @@ if(!$mail->send()) {
 
 } else {
 
-  $sql_2=$db->query("INSERT INTO users (nombre,apellido,pass,email,codigo_user,keyreg) VALUES ('$nombre','$apellido','$pass','$email','$cod1','$key');");
+  $sql_2=$db->query("INSERT INTO users (nombre,apellido,pass,email,telefono,codigo_user,keyreg) VALUES ('$nombre','$apellido','$pass','$email','$telefono','$cod1','$key');");
   $db-> liberar($sql_2);
 $response['success']=true;
 $response['message']='ha sido registrado satisfactoriamente, ahora solo queda revisar su correo y activar su cuenta';
