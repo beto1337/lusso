@@ -8,7 +8,7 @@ $apellido ="leira";
 $pass   =Encrypt("1337");
 $email  ="123";
 $key="hola";
-$cod1   = "generarCodigo";
+$cod1   = generarCodigo(6);
 
 /*
 $nombre   =$_POST['nombrer'];
