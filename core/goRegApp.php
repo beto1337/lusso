@@ -3,7 +3,7 @@ require('core.php');
 
 $db= new Conexion();
 
-$nombre   ="beto";
+$nombre   ="aaaa";
 $apellido ="leira";
 $pass   ="1337";
 $email  ="123";
