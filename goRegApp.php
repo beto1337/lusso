@@ -1,14 +1,13 @@
 <?php
-require('core.php');
+require('core/core.php');
 
 $db= new Conexion();
 
-$nombre   ="aaaa";
+$nombre   ="jesus";
 $apellido ="leira";
 $pass   =Encrypt("1337");
-$email  ="123";
-$key="hola";
-$cod1   = generarCodigo(6);
+$email  ="jleira@uninorte.edu.co";
+$cod1=generarCodigo(6);
 
 /*
 $nombre   =$_POST['nombrer'];
