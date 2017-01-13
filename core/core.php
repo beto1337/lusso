@@ -15,7 +15,7 @@ define('DB_NAME','lusso');
 #Estructura
 //require('vendor/autoload.php');
 require('models/class.Conexion.php');
-//require('bin/functions/Encrypt.php');
+require('bin/functions/Encrypt.php');
 //require('bin/functions/generadorcodigo.php');
 //require('bin/functions/Users.php');
 //require('bin/functions/EmailTemplate.php');

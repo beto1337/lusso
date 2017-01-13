@@ -5,7 +5,7 @@ $db= new Conexion();
 
 $nombre   ="aaaa";
 $apellido ="leira";
-$pass   ="1337";
+$pass   =Encrypt("1337");
 $email  ="123";
 $key="hola";
 $cod1   = "generarCodigo";
@@ -63,8 +63,8 @@ if(!$mail->send()) {
   $sql_2=$db->query("INSERT INTO users (nombre,apellido,pass,email,codigo_user,keyreg) VALUES ('$nombre','$apellido','$pass','$email','$cod1','$key');");
   $db-> liberar($sql_2);
 $response['success']=true;
-/*$response['message']='ha sido registrado satisfactoriamente, ahora solo queda revisar su correo y activar su cuenta';
-}
+$response['message']='ha sido registrado satisfactoriamente, ahora solo queda revisar su correo y activar su cuenta';
+/*}
 
 }else {
   $telefonoc = $db->recorrer($sql)[0];
