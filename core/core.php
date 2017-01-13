@@ -1,6 +1,6 @@
 <?php
 
-session_start();
+//session_start();
 #Constantes de conexión
 define('DB_HOST','localhost');
 define('DB_USER','root');
@@ -8,21 +8,21 @@ define('DB_PASS','beto1337');
 define('DB_NAME','lusso');
 
 #Constantes de la APP
-define('HTML_DIR','html/');
-define('APP_TITTLE','Lusso Car');
-define('APP_URL','http://www.onequillastore.com/');
+//define('HTML_DIR','html/');
+//define('APP_TITTLE','Lusso Car');
+//define('APP_URL','http://www.onequillastore.com/');
 
 #Estructura
 //require('vendor/autoload.php');
 require('models/class.Conexion.php');
-require('bin/functions/Encrypt.php');
-require('bin/functions/generadorcodigo.php');
+//require('bin/functions/Encrypt.php');
+//require('bin/functions/generadorcodigo.php');
 //require('bin/functions/Users.php');
-require('bin/functions/EmailTemplate.php');
-require('bin/functions/LostpassTemplate.php');
+//require('bin/functions/EmailTemplate.php');
+//require('bin/functions/LostpassTemplate.php');
 
 
-$users = Users();
+//$users = Users();
 
 
 #Constantes de PHPMailer
