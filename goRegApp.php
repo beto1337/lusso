@@ -2,22 +2,22 @@
 require('core/core.php');
 
 $db= new Conexion();
-/*
+
 $nombre   ="jesus";
 $apellido ="leira";
 $pass   =Encrypt("1337");
 $email  ="jleira@uninorte.edu.co";
 $telefono  ="3116651305";
 $cod1=generarCodigo(6);
-*/
 
+/*
 $nombre   =$_POST['nombrer'];
 $apellido =$_POST['apellidor'];
 $pass   =Encrypt($_POST['passr']);
 $telefono  =$_POST['telefonor'];
 $email  =$_POST['correor'];
 $cod1   = generarCodigo(6);
-
+*/
 $sql3   =  $db -> query("SELECT codigo_user FROM users WHERE codigo_user='$cod1' LIMIT 1;");
 $cod2   = $db-> recorrer($sql3)[0];
 $db-> liberar($sql3);
