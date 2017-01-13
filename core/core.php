@@ -17,7 +17,7 @@ define('APP_URL','http://www.onequillastore.com/');
 require('models/class.Conexion.php');
 require('bin/functions/Encrypt.php');
 require('bin/functions/generadorcodigo.php');
-require('bin/functions/Users.php');
+//require('bin/functions/Users.php');
 require('bin/functions/EmailTemplate.php');
 require('bin/functions/LostpassTemplate.php');
 

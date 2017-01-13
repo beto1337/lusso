@@ -3,13 +3,13 @@ require('core.php');
 
 $db= new conexion();
 
-$nombre   ="hola";
-$apellido ="hola";
-$pass   ="hola";
-$telefono  ="1234";
-$email  ="hola";
+$nombre   ="beto";
+$apellido ="leira";
+$pass   ="1337";
+$telefono  ="311";
+$email  ="123";
 $key="hola";
-$cod1   ="hola" ;
+$cod1   = "generarCodigo";
 
 /*
 $nombre   =$_POST['nombrer'];
