@@ -1,9 +1,17 @@
 <?php
 require('core.php');
 
-$db= new conexionlusso();
+$db= new conexion();
 
+$nombre   ="hola";
+$apellido ="hola";
+$pass   ="hola";
+$telefono  ="1234";
+$email  ="hola";
+$key="hola";
+$cod1   ="hola" ;
 
+/*
 $nombre   =$_POST['nombrer'];
 $apellido =$_POST['apellidor'];
 $pass   =Encrypt($_POST['passr']);
@@ -11,6 +19,7 @@ $telefono  =$_POST['telefonor'];
 $email  =$_POST['correor'];
 $key="hola";
 $cod1   = generarCodigo(6);
+/*/
 //$sql3   =  $db -> query("SELECT codigo_user FROM users WHERE codigo_user='$cod1' LIMIT 1;");
 //$cod2   = $db-> recorrer($sql3)[0];
 //  $db-> liberar($sql3);
