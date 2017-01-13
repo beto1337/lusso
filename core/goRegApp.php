@@ -6,7 +6,6 @@ $db= new Conexion();
 $nombre   ="beto";
 $apellido ="leira";
 $pass   ="1337";
-$telefono  ="311";
 $email  ="123";
 $key="hola";
 $cod1   = "generarCodigo";
@@ -61,7 +60,7 @@ if(!$mail->send()) {
     $response['message']= $mail->ErrorInfo;
 } else {
 */
-  $sql_2=$db->query("INSERT INTO users (nombre,apellido,pass,email,telefono,codigo_user,keyreg) VALUES ('$nombre','$apellido','$pass','$email','$telefono','$cod1','$key');");
+  $sql_2=$db->query("INSERT INTO users (nombre,apellido,pass,email,codigo_user,keyreg) VALUES ('$nombre','$apellido','$pass','$email','$cod1','$key');");
   $db-> liberar($sql_2);
 $response['success']=true;
 /*$response['message']='ha sido registrado satisfactoriamente, ahora solo queda revisar su correo y activar su cuenta';
