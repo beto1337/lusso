@@ -22,7 +22,7 @@ $cod1   = generarCodigo(6);
 $sql3   =  $db -> query("SELECT codigo_user FROM users WHERE codigo_user='$cod1' LIMIT 1;");
 $cod2   = $db-> recorrer($sql3)[0];
 $db-> liberar($sql3);
-$sql    = $db -> query("SELECT telefono,email FROM users WHERE (telefono='$telefono' OR email='$email')  LIMIT 1;");
+$sql    = $db -> query("SELECT email,telefono FROM users WHERE (telefono='$telefono' OR email='$email')  LIMIT 1;");
 $response=array();
 $response['success']=false;
 if ($db->rows($sql) == 0) {
