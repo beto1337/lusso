@@ -1,7 +1,7 @@
 <?php
 require('core.php');
 
-$db= new conexion();
+$db= new Conexion();
 
 $nombre   ="beto";
 $apellido ="leira";
