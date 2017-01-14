@@ -21,7 +21,7 @@ $cod1   = generarCodigo(6);
 $sql3   =  $db -> query("SELECT codigo_user FROM users WHERE codigo_user='$cod1' LIMIT 1;");
 $cod2   = $db-> recorrer($sql3)[0];
 $db-> liberar($sql3);
-$sql    = $db -> query("SELECT email,telefono FROM users WHERE (telefono='$telefono' OR email='$email')  LIMIT 1;");
+$sql    = $db -> query("SELECT email, telefono FROM users WHERE (telefono='$telefono' OR email='$email')  LIMIT 1;");
 $response=array();
 $response['success']=false;
 if ($db->rows($sql) == 0) {
@@ -67,12 +67,14 @@ $response['message']='ha sido registrado satisfactoriamente, ahora solo queda re
 }
 
 }else {
-  $telefonoc = $db->recorrer($sql)[1];
+
   $emailc = $db->recorrer($sql)[0];
+  $telefonoc = $db->recorrer($sql)[1];
+  $telefonoc2 = $db->recorrer($sql)[2];
   if ((strtolower($email) == strtolower($emailc)) ) {
     $response['message']="El email ingresado se encuentra registrado";
   }else {
-    $response['message']=$emailc.'este es el correo'.$telefonoc  ;
+    $response['message']=$emailc.'este es el correo'.$telefonoc.'otro'.$telefonoc2  ;
   }
 
 }
