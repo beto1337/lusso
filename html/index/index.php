@@ -28,7 +28,7 @@ include(HTML_DIR.'overall/header.php')
         }
 
         }
-        if(isset($_GET['success'])){
+        if(isset($_GET['error'])){
           $noexiste=$_GET['error']);
           if($noexiste){
             echo '<div class="row" style="min-height: 270px;">
@@ -38,7 +38,8 @@ include(HTML_DIR.'overall/header.php')
           </div>
 
             </div>';
-        } ?>
+        }
+      } ?>
       <h2>pregunta por nuestras promociones del mes</h2>
       <p>Para este mes tenemos seguros con el 20% de descuento y bonos de gasolina desde hasta 30mil pesos, aprovecha, no dejes pasar estas ofertas</p>
       <a href="?view=index" target="_self">Leer mas.</a>
