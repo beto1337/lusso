@@ -1,8 +1,8 @@
 <?php
-
+require('core/core.php');
   $db = new Conexion();
-  $data = $db->real_escape_string($_POST['useri']);
-  $pass = Encrypt($_POST['contraseña']);
+  $data = $db->real_escape_string($_POST['dato']);
+  $pass = Encrypt($_POST['pass']);
   $sql = $db->query("SELECT * FROM users WHERE (email='$data' OR telefono='$data') AND pass='$pass' LIMIT 1;");
   $response=array();
   $response['success']=false;
