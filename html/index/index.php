@@ -11,20 +11,34 @@ include(HTML_DIR.'overall/header.php')
     <img src="views/images/Banners_promociones.jpg" alt="">
     <div class="contenedor">
       <?php if(isset($_GET['success'])){
-          var_dump($okey=$_GET['success']);
-
-        echo '<section class="mbr-section mbr-after-navbar" id="content1-10">
-            <div class="mbr-section__container container mbr-section__container--isolated">
-                <div class="row" style="min-height: 270px;">
-                <div class="alert alert-success alert-dismissable fade in">
-            <a href="#" target="_self" class="close" data-dismiss="alert" >X</a>
-                <strong>Información</strong> Tu cuenta ha sido activada</a>
-              </div>
-
+        $okey=$_GET['success']);
+        if($okey){
+          echo '<section class="mbr-section mbr-after-navbar" id="content1-10">
+              <div class="mbr-section__container container mbr-section__container--isolated">
+                  <div class="row" style="min-height: 270px;">
+                  <div class="alert alert-success alert-dismissable fade in">
+              <a href="#" target="_self" class="close" data-dismiss="alert" >X</a>
+                  <strong>Información</strong> Tu cuenta ha sido activada</a>
                 </div>
-            </div>
-        </section>';
-      } ?>
+
+                  </div>
+              </div>
+          </section>';
+
+        }
+
+        }
+        if(isset($_GET['success'])){
+          $noexiste=$_GET['error']);
+          if($noexiste){
+            echo '<div class="row" style="min-height: 270px;">
+            <div class="alert alert-danger alert-dismissable fade in">
+        <a href="#" target="_self" class="close" data-dismiss="alert" >X</a>
+            <strong>Información</strong> No se encontro la cuenta que intenta activar</a>
+          </div>
+
+            </div>';
+        } ?>
       <h2>pregunta por nuestras promociones del mes</h2>
       <p>Para este mes tenemos seguros con el 20% de descuento y bonos de gasolina desde hasta 30mil pesos, aprovecha, no dejes pasar estas ofertas</p>
       <a href="?view=index" target="_self">Leer mas.</a>
