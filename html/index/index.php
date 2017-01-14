@@ -15,9 +15,10 @@ include(HTML_DIR.'overall/header.php')
         echo '<section class="mbr-section mbr-after-navbar" id="content1-10">
             <div class="mbr-section__container container mbr-section__container--isolated">
                 <div class="row" style="min-height: 270px;">
-                    <div class="alert alert-dismissible alert-info">
-                      <strong>Información</strong> Tu cuenta ha sido activada</a>
-                    </div>
+                <div class="alert alert-success alert-dismissable fade in">
+            <a href="#" target="_self" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                <strong>Información</strong> Tu cuenta ha sido activada</a>
+              </div>
 
                 </div>
             </div>
