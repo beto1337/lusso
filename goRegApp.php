@@ -60,7 +60,7 @@ if(!$mail->send()) {
 
 } else {
 
-  $sql_2=$db->query("INSERT INTO users (nombre,apellido,pass,email,telefono,codigo_user,keyreg) VALUES ('$nombre','$apellido','$pass','$email','$telefono','$cod1','$key');");
+$sql_2=$db->query("INSERT INTO users (nombre,apellido,pass,email,telefono,codigo_user,keyreg) VALUES ('$nombre','$apellido','$pass','$email','$telefono','$cod1','$key');");
   $db-> liberar($sql_2);
 $response['success']=true;
 $response['message']='ha sido registrado satisfactoriamente, ahora solo queda revisar su correo y activar su cuenta';
@@ -72,7 +72,7 @@ $response['message']='ha sido registrado satisfactoriamente, ahora solo queda re
   if ((strtolower($email) == strtolower($emailc)) ) {
     $response['message']="El email ingresado se encuentra registrado";
   }else {
-    $response['message']="El telefono ingresado se encuentra registrado" ;
+    $response['message']=$telefonoc . $emailc ;
   }
 
 }
