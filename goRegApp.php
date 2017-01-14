@@ -17,7 +17,7 @@ $pass   =Encrypt($_POST['passr']);
 $telefono  =$_POST['telefonor'];
 $email  =$_POST['correor'];
 $cod1   = generarCodigo(6);
-$verificar= strlen($telefono);
+
 $response=array();
 $response['success']=false;
 
