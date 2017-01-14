@@ -19,14 +19,15 @@ require('core/core.php');
           'codigo_user' => $d['codigo_user'],
           'activo' => $d['activo'],
           'keyreg' => $d['keyreg'],
-          'success'=>true
+          'success'=>true,
+          'message'=>"se envio todo"
       );
 
     }
   }else{
     $response['message']="El correo, telefono o la contraseña ingresados son erroneas";
   }
-  
+
 
   $db->liberar($sql);
   $db->close();
