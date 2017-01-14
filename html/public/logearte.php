@@ -19,7 +19,7 @@ include(HTML_DIR.'overall/header.php')
                                   <div class="alert alert-dismissible alert-info">
                                     <strong>Información</strong> Tu cuenta seguramente se encuentra activa</a>
                                   </div>
-                                  <h3><?php echo APP_TITTLE ?></h3>
+
                               </div>
                           </div>
                       </section>
