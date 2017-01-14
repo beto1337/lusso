@@ -23,8 +23,10 @@ require('core/core.php');
       );
 
     }
+  }else{
+    $response['message']="El correo, telefono o la contraseña ingresados son erroneas";
   }
-
+  
 
   $db->liberar($sql);
   $db->close();
