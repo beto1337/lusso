@@ -17,5 +17,4 @@ header('location: ?view=index&error=true');
   include('html/public/logearte.php');
 }
 
-
  ?>

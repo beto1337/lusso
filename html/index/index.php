@@ -11,6 +11,7 @@ include(HTML_DIR.'overall/header.php')
     <img src="views/images/Banners_promociones.jpg" alt="">
     <div class="contenedor">
       <?php if(isset($_GET['success'])){
+          var_dump($okey=$_GET['success']);
 
         echo '<section class="mbr-section mbr-after-navbar" id="content1-10">
             <div class="mbr-section__container container mbr-section__container--isolated">
