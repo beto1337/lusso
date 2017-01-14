@@ -11,8 +11,6 @@ include(HTML_DIR.'overall/header.php')
     <img src="views/images/Banners_promociones.jpg" alt="">
     <div class="contenedor">
       <?php if(isset($_GET['success'])){
-        $okey=$_GET['success']);
-        if($okey){
           echo '<section class="mbr-section mbr-after-navbar" id="content1-10">
               <div class="mbr-section__container container mbr-section__container--isolated">
                   <div class="row" style="min-height: 270px;">
@@ -24,13 +22,8 @@ include(HTML_DIR.'overall/header.php')
                   </div>
               </div>
           </section>';
-
-        }
-
         }
         if(isset($_GET['error'])){
-          $noexiste=$_GET['error']);
-          if($noexiste){
             echo '<div class="row" style="min-height: 270px;">
             <div class="alert alert-danger alert-dismissable fade in">
         <a href="#" target="_self" class="close" data-dismiss="alert" >X</a>
@@ -39,7 +32,7 @@ include(HTML_DIR.'overall/header.php')
 
             </div>';
         }
-      } ?>
+       ?>
       <h2>pregunta por nuestras promociones del mes</h2>
       <p>Para este mes tenemos seguros con el 20% de descuento y bonos de gasolina desde hasta 30mil pesos, aprovecha, no dejes pasar estas ofertas</p>
       <a href="?view=index" target="_self">Leer mas.</a>
