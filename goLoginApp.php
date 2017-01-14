@@ -8,6 +8,7 @@ require('core/core.php');
   $response['success']=false;
   if($db->rows($sql) > 0) {
     while($d = $db->recorrer($sql)) {
+      if($d['activo']=1){
       $response=array(
         'id' => $d['id'],
           'nombre' => $d['nombre'],
@@ -21,7 +22,12 @@ require('core/core.php');
           'keyreg' => $d['keyreg'],
           'success'=>true,
           'message'=>"se envio todo"
-      );
+      )
+
+    }else {
+      $response['message']=>"La cuenta no se encuentra activa, para activarla siga el link enviado a su correo"
+    }
+      ;
 
     }
   }else{
