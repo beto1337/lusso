@@ -21,7 +21,6 @@ $verificar= strlen($telefono);
 $response=array();
 $response['success']=false;
 
-if ($verificar==10) {
 
   $sql3   =  $db -> query("SELECT codigo_user FROM users WHERE codigo_user='$cod1' LIMIT 1;");
   $cod2   = $db-> recorrer($sql3)[0];
@@ -81,10 +80,6 @@ if ($verificar==10) {
     }
 
   }
-}else {
-
-$response['message']="el numero debe tener 10 caracteres" ;
-}
 
 
 $db-> liberar($sql);
