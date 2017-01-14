@@ -68,11 +68,11 @@ $response['message']='ha sido registrado satisfactoriamente, ahora solo queda re
 
 }else {
 
-  $emailc = $db->recorrer($sql)[0];
-  $telefonoc = $db->recorrer($sql)[1];
-  $telefonoc2 = $db->recorrer($sql)[2];
+  $dato = $db->recorrer($sql);
+  $email=$dato[0];
+  $telefonoc = $dato[1];
   if ((strtolower($email) == strtolower($emailc)) ) {
-    $response['message']="El email ingresado se encuentra registrado";
+    $response['message']="El email ingresado se encuentra registrado".$emailc . $telefonoc;
   }else {
     $response['message']=$emailc.'este es el correo'.$telefonoc.'otro'.$telefonoc2  ;
   }
