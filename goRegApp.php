@@ -72,7 +72,7 @@ $response['message']='ha sido registrado satisfactoriamente, ahora solo queda re
   if ((strtolower($email) == strtolower($emailc)) ) {
     $response['message']="El email ingresado se encuentra registrado";
   }else {
-    $response['message']=$telefonoc.'este es el correo'. $emailc ;
+    $response['message']=$emailc.'este es el correo'.$telefonoc  ;
   }
 
 }
