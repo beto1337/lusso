@@ -11,24 +11,23 @@ include(HTML_DIR.'overall/header.php')
     <img src="views/images/Banners_promociones.jpg" alt="">
     <div class="contenedor">
       <?php if(isset($_GET['success'])){
-          echo '<section class="mbr-section mbr-after-navbar" id="content1-10">
-              <div class="mbr-section__container container mbr-section__container--isolated">
-                  <div class="row" style="min-height: 270px;">
+          echo '<div class="Informacion">
+
                   <div class="alert alert-success alert-dismissable fade in">
-              <a href="#" target="_self" class="close" data-dismiss="alert" >X</a>
+              <button href="#" target="_self" class="close" data-dismiss="alert" >X</button>
                   <strong>Información</strong> Tu cuenta ha sido activada</a>
                 </div>
 
-                  </div>
-              </div>
-          </section>';
+          </div>';
         }
+
         if(isset($_GET['error'])){
-            echo '<div class="row" style="min-height: 270px;">
-            <div class="alert alert-danger alert-dismissable fade in">
-        <a href="#" target="_self" class="close" data-dismiss="alert" >X</a>
-            <strong>Información</strong> No se encontro la cuenta que intenta activar</a>
-          </div>
+            echo '<div class="Informacion">
+
+                    <div class="alert alert-danger alert-dismissable fade in">
+                <button href="#" target="_self" class="close" data-dismiss="alert" >X</button>
+                    <strong>Información</strong> No se encontro la cuenta que intenta activar
+                  </div>
 
             </div>';
         }
@@ -39,9 +38,33 @@ include(HTML_DIR.'overall/header.php')
   </div>
   </section>
 
-        <section id="productos">
-            <div class="contenedor">
-
+  <section id="productos">
+      <div class="contenedor">
+<?php
+$ruta="views/images/productos/CAROLINA_HERRERA_212_SEXY_MEN_100ML";
+if ($aux= opendir($ruta)){
+  while (($archivo = readdir($aux)) !== false)
+              {
+                  if ($archivo!="." && $archivo!="..")
+                  {
+                      $ruta_completa = $ruta . '/' . $archivo;
+                      break;
+                  }
+}}
+echo "<article><img src='".$ruta_completa."' alt=''><h4>samsung galaxy s7 edge</h4></article>";
+?>
+    <article >
+      <img src="views/images/1.jpg" alt="">
+      <h4>samsung galaxy s7 edge</h4>
+    </article>
+    <article >
+      <img src="views/images/2.png" alt="">
+      <h4>iphone 7s plus</h4>
+    </article>
+    <article >
+      <img src="views/images/3.jpg" alt="">
+      <h4>motorola moto Z</h4>
+    </article>
   </div>
 
   </section>

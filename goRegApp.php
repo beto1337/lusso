@@ -1,7 +1,7 @@
 <?php
 require('core/core.php');
 
-$db= new Conexion();
+$db= new conexion();
 /*
 $nombre   ="jesus";
 $apellido ="leira";
@@ -11,12 +11,14 @@ $telefono  ="3116651305";
 $cod1=generarCodigo(6);
 */
 
+
 $nombre   =$_POST['nombrer'];
 $apellido =$_POST['apellidor'];
 $pass   =Encrypt($_POST['passr']);
 $telefono  =$_POST['telefonor'];
 $email  =$_POST['correor'];
 $cod1   = generarCodigo(6);
+
 
 $response=array();
 $response['success']=false;
@@ -61,10 +63,9 @@ $response['success']=false;
       $response['message']= $mail->ErrorInfo;
 
   } else {
-
-  $sql_2=$db->query("INSERT INTO users (nombre,apellido,pass,email,telefono,codigo_user,keyreg) VALUES ('$nombre','$apellido','$pass','$email','$telefono','$cod1','$key');");
-    $db-> liberar($sql_2);
-  $response['success']=true;
+    $sql_2=$db->query("INSERT INTO users (nombre,apellido,pass,email,telefono,codigo_user,keyreg) VALUES ('$nombre','$apellido','$pass','$email','$telefono','$cod1','$keyreg');");
+      $db-> liberar($sql_2);
+    $response['success']=true;
   $response['message']='ha sido registrado satisfactoriamente, ahora solo queda revisar su correo y activar su cuenta';
   }
 
@@ -73,10 +74,10 @@ $response['success']=false;
     $dato = $db->recorrer($sql);
     $emailc=$dato[0];
     $telefonoc = $dato[1];
-    if ((strtolower($email) == strtolower($emailc)) ) {
-      $response['message']="El email ingresado se encuentra registrado en el sistema.";
+    if ((strtolower($email) == strtolower($emailc)) || $telefono==$telefonoc ) {
+      $response['message']="El email o telefono ingresado se encuentra registrado en el sistema.";
     }else {
-      $response['message']="el numero ingresado se encuentra registrado en elsistema."  ;
+      $response['message']="ha ocurrido un error, vuelva a intentarlo."  ;
     }
 
   }

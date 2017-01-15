@@ -1,6 +1,6 @@
 <?php
 
-//session_start();
+session_start();
 #Constantes de conexión
 define('DB_HOST','localhost');
 define('DB_USER','root');
@@ -9,7 +9,7 @@ define('DB_NAME','lusso');
 
 #Constantes de la APP
 define('HTML_DIR','html/');
-define('APP_TITTLE','Lusso Car');
+define('APP_TITTLE','Lusso car');
 define('APP_URL','http://www.onequillastore.com/');
 
 #Estructura
@@ -19,7 +19,7 @@ require('core/bin/functions/Encrypt.php');
 require('core/bin/functions/generadorcodigo.php');
 //require('core/bin/functions/Users.php');
 require('core/bin/functions/EmailTemplate.php');
-//require('core/bin/functions/LostpassTemplate.php');
+require('core/bin/functions/LostpassTemplate.php');
 
 
 //$users = Users();
